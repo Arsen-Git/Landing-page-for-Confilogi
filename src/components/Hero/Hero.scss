@@ -1,0 +1,38 @@
+@import "../../global.scss";
+
+.hero {
+  &__wrapper {
+    position: relative;
+    margin-bottom: 80px;
+    margin-top: 169px;
+  }
+  &__content {
+    margin-top: 50px;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    max-width: 550px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__title {
+    text-transform: capitalize;
+
+    font-size: 46px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+
+    color: $text-dark;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

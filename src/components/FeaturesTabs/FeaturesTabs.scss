@@ -1,0 +1,48 @@
+@import "../../global.scss";
+
+.tabs {
+  &__container {
+    margin-top: 50px;
+    position: relative;
+  }
+  &__menu {
+    max-width: 800px;
+    margin: 0 auto 70px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    &__item {
+      cursor: pointer;
+      color: $text-dark;
+      padding: 0 20px 30px;
+      border-bottom: 4px solid transparent;
+      &-active {
+        border-bottom: 4px solid $light-red;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+  &__info {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__title {
+    font-size: 30px;
+
+    letter-spacing: 1px;
+
+    color: $text-dark;
+  }
+}
