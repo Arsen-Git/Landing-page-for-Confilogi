@@ -4,10 +4,16 @@ import "../../global.scss";
 import logo from "../../assets/logo-bookmark.svg";
 
 export default function Header() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <header className="header">
       <div className="header__content section__container">
-        <figure className="header__logo">
+        <figure onClick={scrollToTop} className="header__logo">
           <img src={logo} alt="Bookmark" />
         </figure>
         <menu className="header__menu">

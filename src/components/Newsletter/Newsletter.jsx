@@ -1,7 +1,7 @@
 import "./Newsletter.scss";
 import "../../global.scss";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Newsletter() {
   const [inputValue, setInputValue] = useState("");
@@ -30,10 +30,29 @@ export default function Newsletter() {
     setInputValue(e.target.value);
   };
 
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  useEffect(() => {
+    const obj = document.getElementById("value");
+    animateValue(obj, 35000, 0, 20000);
+  }, []);
   return (
     <section className="newsletter__wrapper">
       <div className="newsletter__content">
-        <p className="newsletter__amount">35.000+ Already Joined</p>
+        <p className="newsletter__amount">
+          <span id="value">35000</span>+ Already Joined
+        </p>
         <h3 className="newsletter__title">
           Stay up-to-date with what we're doing
         </h3>
