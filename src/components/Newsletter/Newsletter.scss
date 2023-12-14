@@ -25,19 +25,56 @@
     font-weight: 500;
   }
   &__input {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    input {
-      width: 300px;
-      padding: 5px 15px;
-      font-size: 18px;
-      border-radius: 5px;
-      border: none;
-      outline: none;
-      &::placeholder {
-        color: $gray;
-        font-size: 16px;
+    &__form {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    &-invalid {
+      border: 2px solid $light-red !important;
+    }
+    &__field {
+      position: relative;
+      display: flex;
+      align-items: center;
+      &-invalid {
+        &::after {
+          content: url("../../assets/icon-error.svg");
+          display: inline;
+          position: absolute;
+          right: 20px;
+          z-index: 999;
+        }
+      }
+      &__error {
+        padding: 15px 17px 5px;
+
+        width: 300px;
+        position: absolute;
+
+        text-align: center;
+
+        border-radius: 5px;
+        background-color: $light-red;
+        bottom: 0;
+        transition: bottom 0.2s linear;
+        &-active {
+          bottom: -25px;
+        }
+      }
+      input {
+        width: 300px;
+        padding: 2px 15px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        outline: none;
+
+        z-index: 100;
+        &::placeholder {
+          color: $gray;
+          font-size: 16px;
+        }
       }
     }
   }
