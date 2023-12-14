@@ -25,6 +25,9 @@
       &-active {
         border-bottom: 4px solid $light-red;
       }
+      &:hover {
+        color: $light-red;
+      }
     }
   }
   &__content {

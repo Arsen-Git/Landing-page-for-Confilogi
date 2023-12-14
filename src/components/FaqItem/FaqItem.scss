@@ -22,6 +22,9 @@
       position: absolute;
       right: 20px;
     }
+    &:hover {
+      color: $light-red;
+    }
   }
   &__text {
     padding: 25px 0;

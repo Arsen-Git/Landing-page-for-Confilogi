@@ -30,7 +30,7 @@ export default function FaqList() {
     },
   ];
   return (
-    <div className="faq__container">
+    <div className="faq__wrapper">
       <ul className="faq__list">
         {questions.map((quest) => (
           <FaqItem

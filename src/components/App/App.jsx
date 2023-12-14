@@ -6,6 +6,8 @@ import FeaturesTabs from "../FeaturesTabs/FeaturesTabs";
 import ExtensionList from "../ExtensionList/ExtensionList";
 import SectionTopic from "../SectionTopic/SectionTopic";
 import FaqList from "../FaqList/FaqList";
+import Newsletter from "../Newsletter/Newsletter";
+import Footer from "../Footer/Footer";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         text={`Here are some of our FAQs. If tou have any other questions \n you'd like answered please feel free to email us.`}
       />
       <FaqList />
+      <Newsletter />
+      <Footer />
     </>
   );
 }
