@@ -3,21 +3,31 @@ import "./App.scss";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 import FeaturesTabs from "../FeaturesTabs/FeaturesTabs";
+import ExtensionList from "../ExtensionList/ExtensionList";
+import SectionTopic from "../SectionTopic/SectionTopic";
+import FaqList from "../FaqList/FaqList";
 
 function App() {
   return (
     <>
       <Header />
       <Hero />
-      <div className="section__info">
-        <h2 className="section__title">Features</h2>
-        <p className="section__text section__text-centered">
-          Our aim is to make it quick and easy for you to access your favourite
-          websites. Your bookmarks sync between your devices <br /> so you can
-          access them on the go.
-        </p>
-      </div>
+      <SectionTopic
+        title={"Features"}
+        text={`Our aim is to make it quick and easy for you to access your \n favourite websites. Your bookmarks sync between your devices \n so you can access them on the go.`}
+      />
       <FeaturesTabs />
+      <SectionTopic
+        title={"Download the extension"}
+        text={`We've got more browsers in the pipeline. Please do let us know if
+        you've got a favourite you'd like us to prioritize.`}
+      />
+      <ExtensionList />
+      <SectionTopic
+        title={"Frequently Asked Questions"}
+        text={`Here are some of our FAQs. If tou have any other questions \n you'd like answered please feel free to email us.`}
+      />
+      <FaqList />
     </>
   );
 }

@@ -33,9 +33,11 @@ body {
 }
 
 .section__text {
+  white-space: pre-wrap;
+
   font-size: 18px;
   letter-spacing: 1px;
-  line-height: 1.2;
+  line-height: 1.4;
 
   color: $gray;
   &-centered {
@@ -50,6 +52,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 25px;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .btn__orange {
