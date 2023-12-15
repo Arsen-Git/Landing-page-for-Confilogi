@@ -7,18 +7,29 @@ export default function Newsletter() {
   const [inputValue, setInputValue] = useState("");
 
   const onValidate = (e) => {
+    if (e) {
+      e.preventDefault();
+    }
     if (
-      e.target.value !== "" &&
-      !e.target.value.match("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{1,63}$")
+      inputValue === "" ||
+      !inputValue.match("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{1,63}$")
     ) {
-      e.target.classList.add("newsletter__input-invalid");
-      e.target.parentNode.classList.add("newsletter__input__field-invalid");
+      document
+        .getElementById("newsletter")
+        .classList.add("newsletter__input-invalid");
+      document
+        .getElementById("newsletter")
+        .parentNode.classList.add("newsletter__input__field-invalid");
       document
         .querySelector(".newsletter__input__field__error")
         .classList.add("newsletter__input__field__error-active");
     } else {
-      e.target.classList.remove("newsletter__input-invalid");
-      e.target.parentNode.classList.remove("newsletter__input__field-invalid");
+      document
+        .getElementById("newsletter")
+        .classList.remove("newsletter__input-invalid");
+      document
+        .getElementById("newsletter")
+        .parentNode.classList.remove("newsletter__input__field-invalid");
       document
         .querySelector(".newsletter__input__field__error")
         .classList.remove("newsletter__input__field__error-active");
@@ -26,7 +37,7 @@ export default function Newsletter() {
   };
 
   const onType = (e) => {
-    onValidate(e);
+    onValidate();
     setInputValue(e.target.value);
   };
 
@@ -72,9 +83,9 @@ export default function Newsletter() {
             </span>
           </div>
           <button
-            onClick={(e) => e.preventDefault()}
+            onClick={onValidate}
             type="submit"
-            className="btn__orange"
+            className="btn__orange newsletter__btn"
           >
             Contact Us
           </button>

@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="hero__content">
         <div className="hero__info">
           <h1 className="hero__title">A simple bookmark manager</h1>
-          <p className="section__text">
+          <p className="section__text hero__text">
             A clean and simple interface to organize your falourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.

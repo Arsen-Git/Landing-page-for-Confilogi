@@ -8,6 +8,7 @@ import SectionTopic from "../SectionTopic/SectionTopic";
 import FaqList from "../FaqList/FaqList";
 import Newsletter from "../Newsletter/Newsletter";
 import Footer from "../Footer/Footer";
+import Modal from "../Modal/Modal";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <FaqList />
       <Newsletter />
       <Footer />
+      <Modal />
     </>
   );
 }

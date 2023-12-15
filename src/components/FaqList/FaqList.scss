@@ -8,5 +8,14 @@
   &__list {
     width: 550px;
     margin: 50px auto;
+    @media only screen and (max-width: 600px) {
+      width: 450px;
+    }
+    @media only screen and (max-width: 500px) {
+      width: 350px;
+    }
+    @media only screen and (max-width: 450px) {
+      width: 300px;
+    }
   }
 }
