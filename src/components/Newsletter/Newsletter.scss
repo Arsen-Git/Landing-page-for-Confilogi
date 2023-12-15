@@ -63,7 +63,7 @@
         }
       }
       &__error {
-        padding: 10px 17px 2px;
+        padding: 15px 17px 5px;
 
         width: 300px;
         position: absolute;
@@ -72,7 +72,7 @@
 
         border-radius: 5px;
         background-color: $light-red;
-        bottom: 0;
+        bottom: 5px;
         transition: bottom 0.2s linear;
         @media only screen and (max-width: 600px) {
           font-size: 14px;
